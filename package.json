@@ -1,0 +1,20 @@
+{
+  "name": "exchange-ws",
+  "version": "1.0.0",
+  "description": "exchange websocket proxy",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "build": "webpack --mode production",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "package": "npm run build && echo 'Packaging complete'"
+  },
+  "author": "yassuki",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "ws": "^8.18.1"
+  }
+}
