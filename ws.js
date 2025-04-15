@@ -18,7 +18,7 @@ function createWebSocketServer(port, options = {}) {
   const idMap = new Map(); // Map of clientId => ws
   const messageTracker = new WeakMap(); // Rate limiting per socket
 
-  const wss = new WebSocket.Server({ host: '127.0.0.1', port,
+  const wss = new WebSocket.Server({ host: '0.0.0.0', port,
     headers: {
       'User-Agent': 'Yassuki-Orderbook-Bot/1.0'
     }
