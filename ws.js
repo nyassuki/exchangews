@@ -7,7 +7,7 @@ const EventEmitter = require('events');
 function createWebSocketServer(port, options = {}) {
   const {
     maxClients = 2000000000000,
-    allowedIPs = ['127.0.0.1', '::1'],
+    allowedIPs = ['127.0.0.1', '::1', '*'],
     maxPayloadBytes = 1024 * 10, // 10 KB
     rateLimit = 10, // messages per 10 seconds
     pingInterval = 30000 // 30 seconds
@@ -23,7 +23,7 @@ function createWebSocketServer(port, options = {}) {
       'User-Agent': 'Yassuki-Orderbook-Bot/1.0'
     }
    }, () => {
-    console.log(`🚀 WebSocket server started at ws://127.0.0.1:${port}`);
+    console.log(`🚀 WebSocket server started at ws://0.0.0.0:${port}`);
     eventEmitter.emit('serverStarted', port);
   });
 
