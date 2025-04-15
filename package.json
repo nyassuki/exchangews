@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "build": "webpack --mode production",
     "lint": "eslint .",
     "format": "prettier --write .",
     "package": "npm run build && echo 'Packaging complete'"
